@@ -25,6 +25,14 @@ class Comments
     #[ORM\Column(type: 'integer')]
     private $ratings;
 
+    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'comments')]
+    #[ORM\JoinColumn(nullable: false)]
+    private $user;
+
+    #[ORM\ManyToOne(targetEntity: Film::class, inversedBy: 'comments')]
+    #[ORM\JoinColumn(nullable: false)]
+    private $film;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -74,6 +82,30 @@ class Comments
     public function setRatings(int $ratings): self
     {
         $this->ratings = $ratings;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    public function getFilm(): ?Film
+    {
+        return $this->film;
+    }
+
+    public function setFilm(?Film $film): self
+    {
+        $this->film = $film;
 
         return $this;
     }
