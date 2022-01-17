@@ -95,6 +95,7 @@ class Film
     public function setDirector(string $director): self
     {
         $this->director = $director;
+        //salut
 
         return $this;
     }
