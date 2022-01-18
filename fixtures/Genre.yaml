@@ -1,0 +1,19 @@
+App\Entity\Genre:
+  genre1:
+    name: Action
+  genre2:
+    name: Comedy
+  genre3:
+    name: Crime
+  genre4:
+    name: Drama
+  genre5:
+    name: Family
+  genre6:
+    name: Fantasy
+  genre7:
+    name: Horror
+  genre8:
+    name: Romance
+  genre9:
+    name: Adventure
