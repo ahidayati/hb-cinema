@@ -1,0 +1,8 @@
+App\Entity\Comments:
+  comments{1..50}:
+    user: '@user*'
+    film: '@film*'
+    titre: '<word()>'
+    date: '<dateTimeBetween("2018-01-01","now")>'
+    content: '<text(1000)>'
+    ratings: '<randomDigitNot(5)>'
