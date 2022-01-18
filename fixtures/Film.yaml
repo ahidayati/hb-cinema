@@ -5,3 +5,5 @@ App\Entity\Film:
     description: '<text(500)>'
     director: '<firstName()> <lastName()>'
     image_path: '<imageUrl(800 600 "film")>'
+    genre: '<numberBetween(1, 4)>x @genre*'
+    actors: '<numberBetween(1, 4)>x @actors*'
