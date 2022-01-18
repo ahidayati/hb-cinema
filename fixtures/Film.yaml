@@ -1,0 +1,7 @@
+App\Entity\Film:
+  film{1..50}:
+    titre: '<word()>'
+    date: '<dateTimeBetween("1910-01-01","now")>'
+    description: '<text(500)>'
+    director: '<firstName()> <lastName()>'
+    image_path: '<imageUrl(800 600 "film")>'
